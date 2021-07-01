@@ -83,6 +83,7 @@ test:
 #
 production:
   <<: *default
-  database: rails_react_recipe_production
-  username: rails_react_recipe
-  password: <%= ENV['RAILS_REACT_RECIPE_DATABASE_PASSWORD'] %>
+  database:  <%= ENV['DATABASE_NAME'] %>
+  host:  <%= ENV['DATABASE_HOST'] %>
+  username:  <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
